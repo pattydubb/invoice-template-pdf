@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Template</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="controls">
+            <button id="downloadPDF">Download as PDF</button>
+        </div>
+        
+        <div id="invoice" class="invoice-container">
+            <div class="header-buttons">
+                <div class="left-buttons">
+                    <button class="btn">Preview</button>
+                    <button class="btn active">Edit</button>
+                    <button class="btn">History</button>
+                </div>
+                <div class="right-buttons">
+                    <button class="btn">Payment scheduling</button>
+                    <button class="btn">PDF</button>
+                    <button class="btn dark">Email Invoice</button>
+                </div>
+            </div>
+            
+            <div class="preview-section">
+                <div class="preview-header">PREVIEW VIA EMAIL</div>
+                <div class="email-input">
+                    <input type="text" value="pattydub465@gmail.com" readonly />
+                    <span class="check-mark">✓</span>
+                </div>
+                <button class="send-btn">Send</button>
+            </div>
+            
+            <div class="reviews-section">
+                <div class="section-header">REVIEWS</div>
+                <div class="review-option">
+                    <span>Request reviews</span>
+                    <span class="toggle-off"></span>
+                </div>
+                <input type="text" placeholder="Review website link" class="review-link" />
+                <div class="review-note">Grow your business by collecting rating and reviews.</div>
+            </div>
+            
+            <div class="template-section">
+                <div class="section-header">TEMPLATE</div>
+                <div class="color-options">
+                    <!-- Color squares would go here -->
+                </div>
+                <div class="custom-color-dropdown">
+                    <div class="color-icon"></div>
+                    <span>Custom Color</span>
+                    <span class="dropdown-arrow">▼</span>
+                </div>
+                <button class="customize-btn">Customize</button>
+            </div>
+            
+            <div class="main-invoice">
+                <div class="invoice-top">
+                    <div class="from-info">
+                        <h2 class="business-name">patty dub</h2>
+                        <p>822 South Bristol Lane</p>
+                        <p>60005</p>
+                        <p>8479879864</p>
+                        <p>pattydub465@gmail.com</p>
+                    </div>
+                    <div class="invoice-details">
+                        <p class="invoice-label">INVOICE</p>
+                        <p>INV0001</p>
+                        <p class="date-label">DATE</p>
+                        <p>Apr 15, 2025</p>
+                        <p class="due-label">DUE</p>
+                        <p>On Receipt</p>
+                        <p class="balance-label">BALANCE DUE</p>
+                        <p class="balance-amount">USD $525.00</p>
+                    </div>
+                </div>
+                
+                <div class="bill-to-section">
+                    <p class="bill-to-label">BILL TO</p>
+                    <h3 class="client-name">patty demos</h3>
+                    <p>111 West Maple Street</p>
+                    <p>60610</p>
+                    <p>📞 8479879864</p>
+                    <p>✉ 8479879864</p>
+                    <p>pattydemos465@gmail.com</p>
+                </div>
+                
+                <div class="invoice-items">
+                    <div class="item-header">
+                        <div class="desc">DESCRIPTION</div>
+                        <div class="rate">RATE</div>
+                        <div class="qty">QTY</div>
+                        <div class="amount">AMOUNT</div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="desc">5 hrs labor for install</div>
+                        <div class="rate">$75.00</div>
+                        <div class="qty">5</div>
+                        <div class="amount">$375.00</div>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="desc">Parts</div>
+                        <div class="rate">$3.00</div>
+                        <div class="qty">50</div>
+                        <div class="amount">$150.00</div>
+                    </div>
+                    
+                    <div class="total-section">
+                        <div class="total-label">TOTAL</div>
+                        <div class="total-amount">$525.00</div>
+                    </div>
+                    
+                    <div class="balance-due-section">
+                        <div class="balance-due-label">BALANCE DUE</div>
+                        <div class="balance-due-amount">USD $525.00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
